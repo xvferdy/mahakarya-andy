@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@700&display=swap');
+
+@font-face {
+    font-family: Georgia;
+    src: url('/assets/font/georgia.ttf') format('truetype');
+}
+@font-face {
+    font-family: Georgia;
+    src: url('/assets/font/georgiab.ttf') format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: Georgia;
+    src: url('/assets/font/georgiai.ttf') format('truetype');
+    font-style: italic;
+}
+@font-face {
+    font-family: Georgia;
+    src: url('/assets/font/georgiaz.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+:root{
+    --red-color: #D91A1A;
+    --red-7-color: #A61B1B;
+    --red-6-color: #D91A1A;
+    --blue-color: #187CFF;
+
+    --neutral-1-color: #FAF9F7;
+    --neutral-2-color: #E8E6E1;
+    --neutral-3-color: #D3CEC4;
+    --neutral-4-color: #B8B2A7;
+    --neutral-6-color: #857F72;
+    --neutral-7-color: #625D52;
+    --neutral-9-color: #423D33;
+    --neutral-10-color: #27241D;
+
+    --sans-font: 'Open Sans', sans-serif;
+    --oswald-font: 'Oswald', sans-serif;
+    --georgia-font: 'Georgia', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.padding-tb-4 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.padding-tb-3 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+p {
+    font-family: var(--sans-font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+a.button {
+    font-size: 1.125rem;
+    font-family: var(--sans-font);
+    font-weight: 600;
+    color: var(--neutral-1-color);
+    padding: 1rem 1.5rem;
+    background-color: var(--red-6-color);
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+a.button:hover {
+    color: var(--neutral-1-color);
+}
+
+ul.list {
+    padding: 0;
+}
+
+.list-item .icon {
+    color: var(--red-6-color);
+}
+.list-item .icon::after {
+    content: " ";
+}
+
+.list-item {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: var(--sans-font);
+    font-weight: 400;
+    color: var(--neutral-9-color);
+}
+
+/* =================================================
+   [ Navbar Area ] [Default]
+================================================= */
+
+#navbar {
+    position: fixed;
+    z-index: 5;
+    width: 100vw;
+    padding-top: 0;
+    background-color: var(--red-color);
+    height: 5.5rem;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo img {
+    position:abolute;
+    z-index: 10;
+    width: 6.813rem;
+}
+
+.nav-wrapper .menu-wrapper {
+    display: flex;
+    height: 5.5rem;
+    align-items: center;
+}
+
+.nav-wrapper .menu-toggle{
+    display: none;
+}
+
+.nav-wrapper .menu-wrapper .menu {
+    display: flex;
+    gap: 50px;
+    padding: 0;
+}
+
+.menu-wrapper .menu .menu-link {
+    font-size: 1rem;
+    color: var(--neutral-1-color);
+    font-family: var(--sans-font);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+.menu-wrapper .menu .menu-link :active {
+    color: var(--red-7-color);
+}
+
+/* =================================================
+   [ Hero Area ] [Default]
+================================================= */
+#hero.hero-image {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#hero .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 54.5rem;
+}
+
+#hero .tagline {
+    font-family: var(--oswald-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--neutral-1-color);
+}
+
+#hero .button {
+    font-family: var(--sans-font);
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--neutral-1-color);
+    background-color: var(--red-color);
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+
+/* =================================================
+   [ heading ] [Default]
+================================================= */
+.heading {
+    text-align: center;
+    max-width: 40.5rem;
+}
+
+.heading .title{
+    font-family: var(--sans-font);
+    font-weight: 700;
+    font-size: 1.875rem;
+    color: var(--neutral-10-color);
+}
+
+.heading .subtitle{
+    font-family: var(--sans-font);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--neutral-7-color);
+}
+
+/* =================================================
+   [ heading v2] [Default]
+================================================= */
+
+.heading-v2 {
+    display: flex;
+    flex: 1 0 0;
+    margin-bottom: 2rem;
+}
+
+
+.heading-v2 .title {
+    font-size: 1.875rem;
+    font-family: var(--sans-font);
+    font-weight: 700;
+    color: var(--neutral-1-color);
+    position: relative;
+    z-index: 1;
+    &:before {
+        border-top: 0.75rem solid var(--red-6-color);
+        transform: rotate(-1deg);
+        content:"";
+        margin: 0 auto; /* this centers the line to the full width specified */
+        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 95%;
+        z-index: -1;
+    }
+    span { 
+        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+        background: #fff; 
+        padding: 0 15px; 
+    }
+}
+
+/* =================================================
+   [ scroll horizontal ] [Default]
+================================================= */
+.horizontal-scroll {
+    overflow: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* not support in firefox */
+.horizontal-scroll {
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background-color: #FDDFD0;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: var(--red-6-color);
+    }
+}
+
+
+/* =================================================
+   [ kelebihan ] [Default]
+================================================= */
+#kelebihan .card-custom {
+    background-color: var(--neutral-10-color);
+}
+
+#kelebihan .card-custom .card-title{
+    font-family: var(--sans-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--neutral-1-color);
+}
+
+#kelebihan .card-custom .card-number{
+    font-family: var(--oswald-font);
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--neutral-7-color);
+}
+
+#kelebihan .card-custom .card-body{
+    font-family: var(--sans-font);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--neutral-3-color);
+}
+
+/* =================================================
+   [ penyaluran ] [Default]
+================================================= */
+#penyaluran {
+    background-color: #F6FCFF;
+}
+
+#penyaluran .heading-v2 .line {
+    display: none;
+}
+
+#penyaluran .heading-v2 .title {
+    color: var(--neutral-9-color);
+    &::before {
+        display: none;
+    }
+}
+
+#penyaluran .list-item .icon {
+    color: var(--blue-color);
+}
+#penyaluran .list-item {
+    margin-bottom: 0.75rem;
+}
+
+#penyaluran p {
+    color: var(--neutral-9-color);
+}
+
+#penyaluran .button {
+    color: #F6FCFF;
+    background-color: var(--blue-color);
+}
+
+/* =================================================
+   [ sarana ] [Default]
+================================================= */
+#sarana .horizontal-scroll img{
+    width: 15rem;
+    margin: 1rem;
+}
+
+/* =================================================
+   [ mitra ] [Default]
+================================================= */
+#mitra {
+    background-color: var(--neutral-1-color);
+}
+
+#mitra .title {
+    text-align: center;
+    font-size: 0.75rem;
+    font-family: var(--sans-font);
+    font-weight: 800;
+    color: var(--neutral-4-color);
+}
+
+#mitra img {
+    filter: grayscale(100%);
+}
+
+/* =================================================
+   [ lokasi ] [Default]
+================================================= */
+#lokasi .card {
+    border-style: solid none none none;
+    border-width: 9px;
+    border-color: var(--red-6-color);
+    border-radius: 0.5rem;
+    background-color: var(--neutral-1-color);
+}
+#lokasi .card img {
+    width: 3.75rem;
+}
+
+#lokasi .card .title {
+    font-size: 1.5rem;
+    font-family: var(--sans-font);
+    font-weight: 600;
+    color: var(--neutral-10-color);
+}
+
+#lokasi .card p {
+    color: var(--neutral-7-color);
+}
+
+#lokasi .list-item .icon {
+    color: var(--red-6-color);
+}
+
+#lokasi .list-item {
+    color: var(--neutral-10-color);
+}
+
+#lokasi .button {
+    color: var(--red-6-color);
+    background-color: #FDDFD0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08), 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+}
+
+/* =================================================
+   [ double degree ] [Default]
+================================================= */
+#double-degree {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#double-degree p {
+    color: var(--neutral-1-color);
+}
+
+/* =================================================
+   [ why ] [Default]
+================================================= */
+#why {
+    background-color: var(--neutral-1-color);
+}
+
+#why .accordion-item {
+    background-color: #fff;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+#why .accordion-item .accordion-header button{
+    font-size: 1.25rem;
+    font-family: var(--sans-font);
+    font-weight: 600;
+    color: var(--neutral-9-color);
+}
+#why .accordion-item .accordion-header button[aria-expanded=true]{
+    background-color: #fff;
+}
+
+#why .accordion-item .accordion-body p{
+    color: var(--neutral-7-color);
+}
+
+/* =================================================
+   [ testimoni ] [Default]
+================================================= */
+#testimoni .card {
+    min-width: 35rem;
+    min-height: 14.75rem;
+    max-width: 40.5rem;
+    margin-right: 1.5rem;
+    border-radius: 0.5rem;
+    white-space: normal;
+}
+
+#testimoni .card .foto {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#testimoni .card .card-body {
+    height: 100%;
+}
+
+#testimoni .card .card-text {
+    color: var(--neutral-9-color);
+    font-family: Georgia;
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#testimoni .card .people-name {
+    color: var(--neutral-9-color);
+    font-family: Georgia;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#testimoni .card .people-job {
+    color: var(--neutral-6-color);
+    font-family: Georgia;
+    font-size: 0.875rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* =================================================
+   [ stats ] [Default]
+================================================= */
+#stats {
+    background-color: var(--neutral-1-color);
+}
+
+#stats .title {
+    text-align: center;
+    font-size: 0.75rem;
+    font-family: var(--sans-font);
+    font-weight: 800;
+    color: var(--neutral-4-color);
+}
+
+#stats .stats {
+    font-size: 1.5rem;
+    font-family: var(--sans-font);
+    font-weight: 600;
+    color: var(--neutral-4-color);
+}
+
+/* =================================================
+   [ Daftar ] [Default]
+================================================= */
+#daftar {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#daftar .list-item .icon {
+    color: var(--red-6-color);
+}
+
+#daftar .list-item {
+    color: var(--neutral-1-color);
+}
+
+/* =================================================
+   [ Footer ] [Default]
+================================================= */
+footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--red-6-color);
+    color: var(--neutral-1-color);
+    font-size: 0.75rem;
+    font-family: var(--sans-font);
+    font-weight: 400;
+}
+
+footer span {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--neutral-1-color);
+}
+
+a.contact {
+    border-radius: 0.25rem;
+    background: #25D366;
+    box-shadow: 0px 20px 50px -20px #7BB026;
+    font-family: var(--sans-font);
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: var(--neutral-1-color);
+    padding: 1rem 1.5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+}
+
+@media screen and (max-width: 992px) {
+    p {
+        margin-bottom: 0.8rem;
+        font-size: 0.8rem;
+    }
+    .list-item {
+        margin-bottom: 0.8rem;
+        font-size: 0.8rem;
+    }
+    a.button {
+        font-size: 0.8rem; 
+        padding: 0.5rem 0.7rem;
+    }
+    /* =================================================
+       [ Navbar Area ] [MD]
+    ================================================= */
+    .nav-wrapper .menu-wrapper .menu {
+        gap: 25px;
+    }
+
+    /* =================================================
+       [ Hero Area ] [MD]
+    ================================================= */
+    #hero .tagline {
+        font-size: 1.5rem;
+    }
+
+    #hero .button {
+        font-size: 0.6rem;
+        padding: 0.5rem 0.7rem;
+    }
+    /* =================================================
+    [ heading ] [MD]
+    ================================================= */
+    
+    .heading .title{
+        font-size: 1.5rem;
+    }
+    .heading .subtitle{
+        font-size: 1rem;
+    }
+    .heading-v2 .title {
+        font-size: 1.5rem;
+    }
+
+    /* =================================================
+        [ kelebihan ] [MD]
+    ================================================= */
+    #kelebihan .card-custom .card-title{
+        font-size: 1rem;
+    }
+    #kelebihan .card-custom .card-number{
+        font-size: 2rem;
+    }
+    #kelebihan .card-custom .card-body{
+        font-size: 0.8rem;
+    }
+
+    /* =================================================
+        [ sarana ] [MD]
+    ================================================= */
+    #sarana .horizontal-scroll img{
+        width: 10rem;
+        margin: 0.8rem;
+    }
+
+    /* =================================================
+        [ lokasi ] [MD]
+    ================================================= */
+    #lokasi .card img {
+        width: 2.5rem;
+    }
+    #lokasi .card .title {
+        font-size: 1rem;
+    }
+
+    /* =================================================
+        [ why ] [MD]
+    ================================================= */
+    #why .accordion-item .accordion-header button{
+        font-size: 1rem;
+    }
+    /* =================================================
+        [ testimoni ] [Default]
+    ================================================= */
+    #testimoni .card {
+        min-width: 18.75rem;
+        min-height: 10rem;
+        max-width: 19rem;
+        margin-right: 1rem;
+        border-radius: 0.5rem;
+    }
+    #testimoni .card .card-body {
+        height: 100%;
+    }
+    #testimoni .card .card-text {
+        font-size: 0.8rem;
+    }
+    #testimoni .card .people-name {
+        font-size: 1rem;
+    }
+    #testimoni .card .people-job {
+        font-size: 0.5rem;
+    }
+    /* =================================================
+        [ stat ] [Default]
+    ================================================= */
+    #stats .stats {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* =================================================
+       [ Navbar Area ] [SM]
+    ================================================= */
+    #navbar {
+        height: 2.813rem;
+    }
+    
+    #logo img {
+        width: 3.438rem;
+    }
+
+    .nav-wrapper .menu-wrapper {
+        position: absolute;
+        height: auto;
+        top: 2.813rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        display: block;
+        text-align: center;
+        background-color: var(--red-color);
+        border-radius: 10px;
+        clip-path: polygon(0 0 , 100% 0, 100% 0, 0 0);
+        transition: .5s ease-in-out;
+    }
+
+    .nav-wrapper .menu-wrapper.active {
+        clip-path: polygon(0 0 , 100% 0, 100% 100%, 0 100%);
+        transition: .5s ease-in-out;
+    }
+
+    .menu-toggle .fa-xmark {
+        transform: rotate(360deg);
+        transition: .5s;
+    }
+
+    .nav-wrapper .menu-toggle{
+        display: initial;
+        height: 2.813rem;
+        align-items: center;
+        font-size: 2rem;
+        color: var(--neutral-1-color);
+    }
+
+    .nav-wrapper .menu-wrapper .menu {
+        display: block;
+    }
+
+    .menu-wrapper .menu .menu-item {
+        margin: 20px 0;
+    }
+
+}
